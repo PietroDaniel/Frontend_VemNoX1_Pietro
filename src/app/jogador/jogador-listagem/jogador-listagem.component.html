@@ -1,0 +1,22 @@
+<div>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Email</th>
+				<th>Data de Nascimento</th>
+				<th>Total de Partidas</th>
+				<th>Percentual de Vitórias</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let jogador of jogador">
+				<td> {{ jogador.nome }}</td>
+				<td> {{ jogador.email }}</td>
+				<td> {{ jogador.dataNascimento | date: 'dd/MM/yyyy' }}</td>
+				<td> {{ jogador.totalPartidas }}</td>
+				<td> {{ jogador.percentualVitorias | percent }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

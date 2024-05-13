@@ -1,0 +1,7 @@
+<!-- montadora.component.html -->
+<div>
+  <select [(ngModel)]="selectedMontadora" name="montadora">
+    <option *ngFor="let montadora of montadoras" [value]="montadora.id">{{ montadora.nome }} ({{ montadora.paisFundacao }})</option>
+  </select>
+  <button (click)="consultarEstoque()">Consultar estoque</button>
+</div>
